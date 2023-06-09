@@ -3,8 +3,11 @@ from langchain.llms import OpenAI
 
 st.title('🦜🔗 Quickstart App')
 
-openai_api_key = "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" #this is to enable the sidebar
+openai_api_key = "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" 
 #current openai key - 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
+
+#openai_api_key = st.sidebar.text_input('OpenAI API Key') 
+# use this to enable the sidebar
 
 
 def generate_response(input_text):
