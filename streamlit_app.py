@@ -3,13 +3,13 @@ from langchain.llms import OpenAI
 
 st.title('🦜🔗 Quickstart App')
 
-openai_api_key = st.sidebar.text_input('enter openai key')
-#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
+openai_api_key = "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" #this is to enable the sidebar
+#current openai key - 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
 
 
 def generate_response(input_text):
-  llm = OpenAI(temperature=0.7, openai_api_key="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")
-  st.info(llm(input_text))
+  llm = OpenAI(temperature=0.7, openai_api_key = openai_api_key) #defines llm to hit the openai api
+  st.info(llm(input_text)) #hits with the input_text and returns the output with st.info()
 
 with st.form('my_form'):
   text = st.text_area('Enter your inputs:', 'e.g. What are the three key pieces of advice for learning how to code?')
